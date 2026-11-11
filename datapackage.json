@@ -1,0 +1,496 @@
+{
+  "profile": "tabular-data-package",
+  "name": "us-commercial-insurance-glp1-pa-denial-formulary-2026",
+  "title": "US Commercial Insurance GLP-1 Prior-Authorization, Step-Therapy & Cash Bypass Benchmark (2026)",
+  "description": "Structured health-policy and payer-formulary audit across 108 US commercial PBM, self-insured employer, ACA Marketplace, Medicare Part D, and direct cash-pay benchmarks evaluating GLP-1 prior-authorization BMI gates, step-therapy durations, lifestyle-app locks, and Q1 deductible out-of-pocket exposure.",
+  "homepage": "https://losingweightrx.com/datasets/us-commercial-insurance-glp1-pa-denial-formulary-2026/",
+  "version": "1.0.0",
+  "created": "2026-11-11",
+  "id": "https://doi.org/10.5281/zenodo.24139325",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Losing Weight RX Pharmacoeconomics & Consumer Audit Desk",
+      "role": "author",
+      "path": "https://losingweightrx.com/editorial-standards"
+    }
+  ],
+  "resources": [
+    {
+      "name": "main",
+      "path": "payer_formulary_audit.csv",
+      "profile": "tabular-data-resource",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "bytes": 24532,
+      "hash": "sha256:7f7c46730a2df8fbff1ed86afdd0662f60f32b191fd786b3d67d64e269f8e41c",
+      "schema": {
+        "fields": [
+          {
+            "name": "formulary_record_id",
+            "type": "string"
+          },
+          {
+            "name": "payer_or_benchmark_entity",
+            "type": "string"
+          },
+          {
+            "name": "plan_channel_category",
+            "type": "string"
+          },
+          {
+            "name": "pbm_administrator",
+            "type": "string"
+          },
+          {
+            "name": "covered_indication_scope",
+            "type": "string"
+          },
+          {
+            "name": "molecule_evaluated",
+            "type": "string"
+          },
+          {
+            "name": "prior_authorization_mandated_boolean",
+            "type": "boolean"
+          },
+          {
+            "name": "min_bmi_threshold_no_comorbidity",
+            "type": "number"
+          },
+          {
+            "name": "comorbidity_bmi_threshold",
+            "type": "number"
+          },
+          {
+            "name": "step_therapy_months_required",
+            "type": "integer"
+          },
+          {
+            "name": "mandatory_coaching_app_lock_boolean",
+            "type": "boolean"
+          },
+          {
+            "name": "employer_rider_opt_in_required_boolean",
+            "type": "boolean"
+          },
+          {
+            "name": "typical_annual_deductible_exposure_usd",
+            "type": "number"
+          },
+          {
+            "name": "monthly_copay_or_cash_rate_usd",
+            "type": "number"
+          },
+          {
+            "name": "estimated_q1_out_of_pocket_usd",
+            "type": "number"
+          },
+          {
+            "name": "estimated_12month_patient_spend_usd",
+            "type": "number"
+          },
+          {
+            "name": "pa_reauthorization_interval_months",
+            "type": "integer"
+          },
+          {
+            "name": "median_approval_turnaround_days",
+            "type": "integer"
+          },
+          {
+            "name": "access_friction_index_100",
+            "type": "integer"
+          },
+          {
+            "name": "canonical_source_url",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "national-commercial-pbms",
+      "path": "subsets/national_commercial_pbms.csv",
+      "profile": "tabular-data-resource",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "bytes": 9328,
+      "hash": "sha256:58318d677e40985ee7d481ec35fe956b6fc771414e6637930a6e453d7d06595a",
+      "schema": {
+        "fields": [
+          {
+            "name": "formulary_record_id",
+            "type": "string"
+          },
+          {
+            "name": "payer_or_benchmark_entity",
+            "type": "string"
+          },
+          {
+            "name": "plan_channel_category",
+            "type": "string"
+          },
+          {
+            "name": "pbm_administrator",
+            "type": "string"
+          },
+          {
+            "name": "covered_indication_scope",
+            "type": "string"
+          },
+          {
+            "name": "molecule_evaluated",
+            "type": "string"
+          },
+          {
+            "name": "prior_authorization_mandated_boolean",
+            "type": "boolean"
+          },
+          {
+            "name": "min_bmi_threshold_no_comorbidity",
+            "type": "number"
+          },
+          {
+            "name": "comorbidity_bmi_threshold",
+            "type": "number"
+          },
+          {
+            "name": "step_therapy_months_required",
+            "type": "integer"
+          },
+          {
+            "name": "mandatory_coaching_app_lock_boolean",
+            "type": "boolean"
+          },
+          {
+            "name": "employer_rider_opt_in_required_boolean",
+            "type": "boolean"
+          },
+          {
+            "name": "typical_annual_deductible_exposure_usd",
+            "type": "number"
+          },
+          {
+            "name": "monthly_copay_or_cash_rate_usd",
+            "type": "number"
+          },
+          {
+            "name": "estimated_q1_out_of_pocket_usd",
+            "type": "number"
+          },
+          {
+            "name": "estimated_12month_patient_spend_usd",
+            "type": "number"
+          },
+          {
+            "name": "pa_reauthorization_interval_months",
+            "type": "integer"
+          },
+          {
+            "name": "median_approval_turnaround_days",
+            "type": "integer"
+          },
+          {
+            "name": "access_friction_index_100",
+            "type": "integer"
+          },
+          {
+            "name": "canonical_source_url",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "employer-self-insured-exclusions",
+      "path": "subsets/employer_self_insured_exclusions.csv",
+      "profile": "tabular-data-resource",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "bytes": 6068,
+      "hash": "sha256:bae2cdaf17447f838a7be41c846debf28e4cc662cd5218d09f124eb83565bd65",
+      "schema": {
+        "fields": [
+          {
+            "name": "formulary_record_id",
+            "type": "string"
+          },
+          {
+            "name": "payer_or_benchmark_entity",
+            "type": "string"
+          },
+          {
+            "name": "plan_channel_category",
+            "type": "string"
+          },
+          {
+            "name": "pbm_administrator",
+            "type": "string"
+          },
+          {
+            "name": "covered_indication_scope",
+            "type": "string"
+          },
+          {
+            "name": "molecule_evaluated",
+            "type": "string"
+          },
+          {
+            "name": "prior_authorization_mandated_boolean",
+            "type": "boolean"
+          },
+          {
+            "name": "min_bmi_threshold_no_comorbidity",
+            "type": "number"
+          },
+          {
+            "name": "comorbidity_bmi_threshold",
+            "type": "number"
+          },
+          {
+            "name": "step_therapy_months_required",
+            "type": "integer"
+          },
+          {
+            "name": "mandatory_coaching_app_lock_boolean",
+            "type": "boolean"
+          },
+          {
+            "name": "employer_rider_opt_in_required_boolean",
+            "type": "boolean"
+          },
+          {
+            "name": "typical_annual_deductible_exposure_usd",
+            "type": "number"
+          },
+          {
+            "name": "monthly_copay_or_cash_rate_usd",
+            "type": "number"
+          },
+          {
+            "name": "estimated_q1_out_of_pocket_usd",
+            "type": "number"
+          },
+          {
+            "name": "estimated_12month_patient_spend_usd",
+            "type": "number"
+          },
+          {
+            "name": "pa_reauthorization_interval_months",
+            "type": "integer"
+          },
+          {
+            "name": "median_approval_turnaround_days",
+            "type": "integer"
+          },
+          {
+            "name": "access_friction_index_100",
+            "type": "integer"
+          },
+          {
+            "name": "canonical_source_url",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "federal-medicare-aca-channels",
+      "path": "subsets/federal_medicare_aca_channels.csv",
+      "profile": "tabular-data-resource",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "bytes": 7607,
+      "hash": "sha256:eef58aa0d6ba6585da440f42ac42361b33a50041b76b4b99d55ec65811c5690b",
+      "schema": {
+        "fields": [
+          {
+            "name": "formulary_record_id",
+            "type": "string"
+          },
+          {
+            "name": "payer_or_benchmark_entity",
+            "type": "string"
+          },
+          {
+            "name": "plan_channel_category",
+            "type": "string"
+          },
+          {
+            "name": "pbm_administrator",
+            "type": "string"
+          },
+          {
+            "name": "covered_indication_scope",
+            "type": "string"
+          },
+          {
+            "name": "molecule_evaluated",
+            "type": "string"
+          },
+          {
+            "name": "prior_authorization_mandated_boolean",
+            "type": "boolean"
+          },
+          {
+            "name": "min_bmi_threshold_no_comorbidity",
+            "type": "number"
+          },
+          {
+            "name": "comorbidity_bmi_threshold",
+            "type": "number"
+          },
+          {
+            "name": "step_therapy_months_required",
+            "type": "integer"
+          },
+          {
+            "name": "mandatory_coaching_app_lock_boolean",
+            "type": "boolean"
+          },
+          {
+            "name": "employer_rider_opt_in_required_boolean",
+            "type": "boolean"
+          },
+          {
+            "name": "typical_annual_deductible_exposure_usd",
+            "type": "number"
+          },
+          {
+            "name": "monthly_copay_or_cash_rate_usd",
+            "type": "number"
+          },
+          {
+            "name": "estimated_q1_out_of_pocket_usd",
+            "type": "number"
+          },
+          {
+            "name": "estimated_12month_patient_spend_usd",
+            "type": "number"
+          },
+          {
+            "name": "pa_reauthorization_interval_months",
+            "type": "integer"
+          },
+          {
+            "name": "median_approval_turnaround_days",
+            "type": "integer"
+          },
+          {
+            "name": "access_friction_index_100",
+            "type": "integer"
+          },
+          {
+            "name": "canonical_source_url",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "direct-503a-cash-bypass-benchmarks",
+      "path": "subsets/direct_503a_cash_bypass_benchmarks.csv",
+      "profile": "tabular-data-resource",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "bytes": 3272,
+      "hash": "sha256:9409674392d97702c17d44310f1aa298e9ebfb154ec39e8c5dc256a826f129b8",
+      "schema": {
+        "fields": [
+          {
+            "name": "formulary_record_id",
+            "type": "string"
+          },
+          {
+            "name": "payer_or_benchmark_entity",
+            "type": "string"
+          },
+          {
+            "name": "plan_channel_category",
+            "type": "string"
+          },
+          {
+            "name": "pbm_administrator",
+            "type": "string"
+          },
+          {
+            "name": "covered_indication_scope",
+            "type": "string"
+          },
+          {
+            "name": "molecule_evaluated",
+            "type": "string"
+          },
+          {
+            "name": "prior_authorization_mandated_boolean",
+            "type": "boolean"
+          },
+          {
+            "name": "min_bmi_threshold_no_comorbidity",
+            "type": "number"
+          },
+          {
+            "name": "comorbidity_bmi_threshold",
+            "type": "number"
+          },
+          {
+            "name": "step_therapy_months_required",
+            "type": "integer"
+          },
+          {
+            "name": "mandatory_coaching_app_lock_boolean",
+            "type": "boolean"
+          },
+          {
+            "name": "employer_rider_opt_in_required_boolean",
+            "type": "boolean"
+          },
+          {
+            "name": "typical_annual_deductible_exposure_usd",
+            "type": "number"
+          },
+          {
+            "name": "monthly_copay_or_cash_rate_usd",
+            "type": "number"
+          },
+          {
+            "name": "estimated_q1_out_of_pocket_usd",
+            "type": "number"
+          },
+          {
+            "name": "estimated_12month_patient_spend_usd",
+            "type": "number"
+          },
+          {
+            "name": "pa_reauthorization_interval_months",
+            "type": "integer"
+          },
+          {
+            "name": "median_approval_turnaround_days",
+            "type": "integer"
+          },
+          {
+            "name": "access_friction_index_100",
+            "type": "integer"
+          },
+          {
+            "name": "canonical_source_url",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ]
+}

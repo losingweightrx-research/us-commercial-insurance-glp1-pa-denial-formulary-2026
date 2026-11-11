@@ -1,0 +1,397 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "dct": "http://purl.org/dc/terms/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileObject": "cr:fileObject",
+    "recordSet": "cr:recordSet",
+    "source": "cr:source",
+    "sc": "https://schema.org/"
+  },
+  "@type": "sc:Dataset",
+  "@id": "https://losingweightrx.com/datasets/us-commercial-insurance-glp1-pa-denial-formulary-2026/",
+  "name": "US Commercial Insurance GLP-1 Prior-Authorization, Step-Therapy & Cash Bypass Benchmark (2026)",
+  "description": "Structured health-policy and payer-formulary audit across 108 US commercial PBM, self-insured employer, ACA Marketplace, Medicare Part D, and direct cash-pay benchmarks evaluating GLP-1 prior-authorization BMI gates, step-therapy durations, lifestyle-app locks, and Q1 deductible out-of-pocket exposure.",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "url": "https://losingweightrx.com/datasets/us-commercial-insurance-glp1-pa-denial-formulary-2026/",
+  "identifier": "https://doi.org/10.5281/zenodo.24139325",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "version": "1.0.0",
+  "datePublished": "2026-11-11",
+  "dateModified": "2026-11-11",
+  "creator": {
+    "@type": "sc:Organization",
+    "name": "Losing Weight RX Pharmacoeconomics & Consumer Audit Desk",
+    "parentOrganization": {
+      "@type": "sc:Organization",
+      "name": "Losing Weight RX LLC"
+    },
+    "url": "https://losingweightrx.com/editorial-standards"
+  },
+  "about": [
+    {
+      "@id": "https://www.wikidata.org/wiki/Q7245353"
+    },
+    {
+      "@id": "https://www.wikidata.org/wiki/Q7180763"
+    },
+    {
+      "@id": "https://www.wikidata.org/wiki/Q27275718"
+    }
+  ],
+  "sameAs": [
+    "https://huggingface.co/datasets/losing-weight-rx/us-commercial-insurance-glp1-pa-denial-formulary-2026",
+    "https://github.com/losingweightrx-research/us-commercial-insurance-glp1-pa-denial-formulary-2026",
+    "https://doi.org/10.5281/zenodo.24139325"
+  ],
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "payer_formulary_audit.csv",
+      "name": "payer_formulary_audit.csv",
+      "contentUrl": "https://losingweightrx.com/datasets/us-commercial-insurance-glp1-pa-denial-formulary-2026/payer_formulary_audit.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": "24532 B",
+      "sha256": "7f7c46730a2df8fbff1ed86afdd0662f60f32b191fd786b3d67d64e269f8e41c"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "subsets/national_commercial_pbms.csv",
+      "name": "subsets/national_commercial_pbms.csv",
+      "contentUrl": "https://losingweightrx.com/datasets/us-commercial-insurance-glp1-pa-denial-formulary-2026/subsets/national_commercial_pbms.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": "9328 B",
+      "sha256": "58318d677e40985ee7d481ec35fe956b6fc771414e6637930a6e453d7d06595a"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "subsets/employer_self_insured_exclusions.csv",
+      "name": "subsets/employer_self_insured_exclusions.csv",
+      "contentUrl": "https://losingweightrx.com/datasets/us-commercial-insurance-glp1-pa-denial-formulary-2026/subsets/employer_self_insured_exclusions.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": "6068 B",
+      "sha256": "bae2cdaf17447f838a7be41c846debf28e4cc662cd5218d09f124eb83565bd65"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "subsets/federal_medicare_aca_channels.csv",
+      "name": "subsets/federal_medicare_aca_channels.csv",
+      "contentUrl": "https://losingweightrx.com/datasets/us-commercial-insurance-glp1-pa-denial-formulary-2026/subsets/federal_medicare_aca_channels.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": "7607 B",
+      "sha256": "eef58aa0d6ba6585da440f42ac42361b33a50041b76b4b99d55ec65811c5690b"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "subsets/direct_503a_cash_bypass_benchmarks.csv",
+      "name": "subsets/direct_503a_cash_bypass_benchmarks.csv",
+      "contentUrl": "https://losingweightrx.com/datasets/us-commercial-insurance-glp1-pa-denial-formulary-2026/subsets/direct_503a_cash_bypass_benchmarks.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": "3272 B",
+      "sha256": "9409674392d97702c17d44310f1aa298e9ebfb154ec39e8c5dc256a826f129b8"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "main",
+      "name": "main",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "main/formulary_record_id",
+          "name": "formulary_record_id",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "payer_formulary_audit.csv"
+            },
+            "extract": {
+              "column": "formulary_record_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/payer_or_benchmark_entity",
+          "name": "payer_or_benchmark_entity",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "payer_formulary_audit.csv"
+            },
+            "extract": {
+              "column": "payer_or_benchmark_entity"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/plan_channel_category",
+          "name": "plan_channel_category",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "payer_formulary_audit.csv"
+            },
+            "extract": {
+              "column": "plan_channel_category"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/pbm_administrator",
+          "name": "pbm_administrator",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "payer_formulary_audit.csv"
+            },
+            "extract": {
+              "column": "pbm_administrator"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/covered_indication_scope",
+          "name": "covered_indication_scope",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "payer_formulary_audit.csv"
+            },
+            "extract": {
+              "column": "covered_indication_scope"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/molecule_evaluated",
+          "name": "molecule_evaluated",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "payer_formulary_audit.csv"
+            },
+            "extract": {
+              "column": "molecule_evaluated"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/prior_authorization_mandated_boolean",
+          "name": "prior_authorization_mandated_boolean",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileObject": {
+              "@id": "payer_formulary_audit.csv"
+            },
+            "extract": {
+              "column": "prior_authorization_mandated_boolean"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/min_bmi_threshold_no_comorbidity",
+          "name": "min_bmi_threshold_no_comorbidity",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "payer_formulary_audit.csv"
+            },
+            "extract": {
+              "column": "min_bmi_threshold_no_comorbidity"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/comorbidity_bmi_threshold",
+          "name": "comorbidity_bmi_threshold",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "payer_formulary_audit.csv"
+            },
+            "extract": {
+              "column": "comorbidity_bmi_threshold"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/step_therapy_months_required",
+          "name": "step_therapy_months_required",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "payer_formulary_audit.csv"
+            },
+            "extract": {
+              "column": "step_therapy_months_required"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/mandatory_coaching_app_lock_boolean",
+          "name": "mandatory_coaching_app_lock_boolean",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileObject": {
+              "@id": "payer_formulary_audit.csv"
+            },
+            "extract": {
+              "column": "mandatory_coaching_app_lock_boolean"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/employer_rider_opt_in_required_boolean",
+          "name": "employer_rider_opt_in_required_boolean",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileObject": {
+              "@id": "payer_formulary_audit.csv"
+            },
+            "extract": {
+              "column": "employer_rider_opt_in_required_boolean"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/typical_annual_deductible_exposure_usd",
+          "name": "typical_annual_deductible_exposure_usd",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "payer_formulary_audit.csv"
+            },
+            "extract": {
+              "column": "typical_annual_deductible_exposure_usd"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/monthly_copay_or_cash_rate_usd",
+          "name": "monthly_copay_or_cash_rate_usd",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "payer_formulary_audit.csv"
+            },
+            "extract": {
+              "column": "monthly_copay_or_cash_rate_usd"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/estimated_q1_out_of_pocket_usd",
+          "name": "estimated_q1_out_of_pocket_usd",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "payer_formulary_audit.csv"
+            },
+            "extract": {
+              "column": "estimated_q1_out_of_pocket_usd"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/estimated_12month_patient_spend_usd",
+          "name": "estimated_12month_patient_spend_usd",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "payer_formulary_audit.csv"
+            },
+            "extract": {
+              "column": "estimated_12month_patient_spend_usd"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/pa_reauthorization_interval_months",
+          "name": "pa_reauthorization_interval_months",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "payer_formulary_audit.csv"
+            },
+            "extract": {
+              "column": "pa_reauthorization_interval_months"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/median_approval_turnaround_days",
+          "name": "median_approval_turnaround_days",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "payer_formulary_audit.csv"
+            },
+            "extract": {
+              "column": "median_approval_turnaround_days"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/access_friction_index_100",
+          "name": "access_friction_index_100",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "payer_formulary_audit.csv"
+            },
+            "extract": {
+              "column": "access_friction_index_100"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "main/canonical_source_url",
+          "name": "canonical_source_url",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "payer_formulary_audit.csv"
+            },
+            "extract": {
+              "column": "canonical_source_url"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
